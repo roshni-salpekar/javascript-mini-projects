@@ -2,6 +2,9 @@ const RANDOM_QUOTE_API_URL = "https://api.quotable.io/random";
 const quoteDisplayElement = document.getElementById("quoteDisplay");
 const quoteInputElement = document.getElementById("quoteInput");
 
+quoteInputElement.addEventListener("input", () => {
+  const arrayQuote = quoteDisplayElement.querySelectorAll("span");
+});
 function getRandomQuote() {
   return fetch(RANDOM_QUOTE_API_URL)
     .then((response) => response.json())
