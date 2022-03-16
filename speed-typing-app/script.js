@@ -4,6 +4,25 @@ const quoteInputElement = document.getElementById("quoteInput");
 
 quoteInputElement.addEventListener("input", () => {
   const arrayQuote = quoteDisplayElement.querySelectorAll("span");
+  const arrayValue = quoteInputElement.value.split("");
+  let correct = true;
+  arrayQuote.forEach((characterS, index) => {
+    const character = arrayValue[index];
+    if (character == null) {
+      characterS.classList.remove("incorrect");
+      characterS.classList.remove("correct");
+      correct = false;
+    } else if (character === characterS.innerText) {
+      characterS.classList.add("correct");
+      characterS.classList.remove("incorrect");
+    } else {
+      characterS.classList.add("incorrect");
+      characterS.classList.remove("correct");
+      correct = false;
+    }
+  });
+
+  if (correct) renderNewQuote();
 });
 function getRandomQuote() {
   return fetch(RANDOM_QUOTE_API_URL)
