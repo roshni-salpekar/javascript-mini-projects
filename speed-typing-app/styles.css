@@ -8,7 +8,7 @@ body {
   align-items: center;
   min-height: 100vh;
   margin: 0;
-  background-color: #1e0555;
+  background-color: #dc93f6;
 }
 
 body,
@@ -16,7 +16,7 @@ body,
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 .container {
-  background-color: #f0db4f;
+  background-color: #f7ebfd;
   padding: 1rem;
   border-radius: 0.5rem;
   width: 700px;
@@ -25,9 +25,9 @@ body,
 
 .timer {
   position: absolute;
-  top: 2rem;
-  font-size: 3rem;
-  color: #f0db4f;
+  top: 4rem;
+  font-size: 5rem;
+  color: #461873;
   font-weight: bold;
 }
 
@@ -55,7 +55,7 @@ body,
 }
 
 .correct {
-  color: green;
+  color: #509724;
 }
 
 .incorrect {
